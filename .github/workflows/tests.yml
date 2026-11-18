@@ -8,11 +8,12 @@ jobs:
   core:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
       - run: python -m pip install --upgrade pip
-      - run: python -m pip install -e '.[dev]'
-      - run: pytest tests/test_parsers.py tests/test_windows.py tests/test_integrity.py
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install -e . --no-deps
+      - run: python -m pytest -vv tests/test_parsers.py tests/test_windows.py tests/test_integrity.py
       - run: python scripts/reproduce_paper_metrics.py
