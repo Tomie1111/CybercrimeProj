@@ -1,0 +1,9 @@
+pid,method,method_name,unit,python_incremental_peak_bytes,rss_before_detection_bytes,rss_after_detection_bytes,isolated_process_peak_rss_bytes
+17390,R1,R1-only,Beacon,492,400982016,408780800,408780800
+17429,R1,R1-only,W20,4280884,391102464,327008256,400424960
+17468,STATIC,Static Structural/Security Fingerprinting,W20,4280852,386891776,325894144,396214272
+17489,TIMESHIELD,Time-Shield v2,Beacon,5097,390725632,361250816,390971392
+17528,TIMESHIELD,Time-Shield v2,W20,4280884,390987776,326549504,400097280
+17567,RF,Frozen Random Forest,W20,4409473,441466880,70909952,446349312
+18522,FULL,Phase 4.1 Evidence-Gated Full Multi-Factor,Beacon,5153,390512640,340525056,390709248
+18581,FULL,Phase 4.1 Evidence-Gated Full Multi-Factor,W20,4280852,395788288,327286784,403816448

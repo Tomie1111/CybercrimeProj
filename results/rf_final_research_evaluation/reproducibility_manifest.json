@@ -1,0 +1,27 @@
+{
+  "experiment": "rf_final_research_evaluation",
+  "model_sha256": "8a1e1717f77ded865336c7d4d9c3db81559bb1300cb979e73c803f02f26ed145",
+  "threshold": 0.3,
+  "proposed_rf_retrained": false,
+  "proposed_rf_threshold_tuned": false,
+  "baseline_reconstruction_training_performed": true,
+  "baseline_selection_source": "AWID3 validation only; no D04/D05 tuning",
+  "sources": [
+    "clean_rebuild_v1",
+    "ml_knn_lstm",
+    "phase4_2_lightweight_benchmark"
+  ],
+  "outputs": {
+    "figures/model_comparison_d05ar2.png": "19f404b87dec8314327babdbd7faa6cfaa67ab635259612fecd08336534de6c6",
+    "figures/rf_confusion_matrices.png": "7341a229c099f6c3794740946fffd6063d2ac0da4aa4aee8b239689f2993fde5",
+    "figures/rf_generalization_f1.png": "389ada518c68714ada50598033c44c059c8d8d7219dcdca8db0e5cad736a8e68",
+    "figures/rf_latency.png": "bc706bb2a3d90287794f0dbf1302f5218b936378b873b943f727a4cb7ad2e1af",
+    "lightweight_summary.csv": "50a574bf1116949f64243c988489d80b3af75b0d7f0b1a43b347ff0d1bdcb247",
+    "literature_comparison.csv": "28c863b30b0259fc4a04fc6f93c8bdab9c84a38439928bffe73e9159bf15005b",
+    "model_comparison.csv": "cc181195cebf9557ffd6b358e247035e6cabd8569eeac7c11a613924cc45ff02",
+    "report_th.md": "57f6c6ba1920c04b9b3167f6bff5b8a6e2cdba4bbf1a3b5adcda261409252b9c",
+    "rf_performance_by_scenario.csv": "54c9177fee09dbb47d1d2b0d563220e49485b02ae551b1e6cbb443d250920ccd",
+    "window_size_ablation_awid3.csv": "6321401924c60d1bf8551a92b13eeeb4ed7047e2804097ec0a3c742aaaa7bf80"
+  },
+  "command": ".venv/bin/python scripts/build_rf_research_package.py"
+}

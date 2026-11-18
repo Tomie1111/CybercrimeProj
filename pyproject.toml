@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evil-twin-rf"
+version = "1.0.0"
+description = "RF-only Wi-Fi Evil Twin detection from causal Beacon-frame windows"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "joblib>=1.4",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "scapy>=2.6",
+  "scikit-learn>=1.5",
+]
+
+[project.optional-dependencies]
+paper = ["matplotlib>=3.9", "PyYAML>=6.0"]
+baselines = ["torch>=2.7"]
+dev = ["pytest>=8.3"]
+
+[project.scripts]
+evil-twin-rf = "evil_twin.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

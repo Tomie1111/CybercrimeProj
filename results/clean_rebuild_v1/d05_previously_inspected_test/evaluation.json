@@ -1,0 +1,87 @@
+{
+  "experiment_id": "clean_rebuild_v1",
+  "evaluation_status": "PREVIOUSLY_INSPECTED_EXTERNAL_TEST",
+  "independent_test_claim": false,
+  "model_sha256": "8a1e1717f77ded865336c7d4d9c3db81559bb1300cb979e73c803f02f26ed145",
+  "freeze_lock_sha256": "91d7009655c942ab413eefddc64fa64414529c10d4b8e804aad89c4dc800162c",
+  "threshold": 0.3,
+  "model_or_preprocessor_refit": false,
+  "recalibrated_on_d05": false,
+  "feature_or_threshold_selection_on_d05": false,
+  "overall": {
+    "n": 1729,
+    "decisions": 1729,
+    "decision_coverage": 1.0,
+    "abstention_rate": 0.0,
+    "confusion_matrix": [
+      [
+        1277,
+        0
+      ],
+      [
+        163,
+        289
+      ]
+    ],
+    "precision": 1.0,
+    "recall": 0.6393805309734514,
+    "f1": 0.7800269905533064,
+    "balanced_accuracy": 0.8196902654867257,
+    "pr_auc": 0.9794974069520479,
+    "roc_auc": 0.9860829100283436,
+    "legitimate_fpr": 0.0,
+    "verified_attack_recall": 0.6393805309734514
+  },
+  "captures": [
+    {
+      "capture_id": "D05-A",
+      "n": 879,
+      "decisions": 879,
+      "decision_coverage": 1.0,
+      "abstention_rate": 0.0,
+      "confusion_matrix": [
+        [
+          788,
+          0
+        ],
+        [
+          91,
+          0
+        ]
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "pr_auc": 0.8039711292124513,
+      "roc_auc": 0.900980364812852,
+      "legitimate_fpr": 0.0,
+      "verified_attack_recall": 0.0
+    },
+    {
+      "capture_id": "D05-A-R2",
+      "n": 850,
+      "decisions": 850,
+      "decision_coverage": 1.0,
+      "abstention_rate": 0.0,
+      "confusion_matrix": [
+        [
+          489,
+          0
+        ],
+        [
+          72,
+          289
+        ]
+      ],
+      "precision": 1.0,
+      "recall": 0.8005540166204986,
+      "f1": 0.8892307692307693,
+      "balanced_accuracy": 0.9002770083102494,
+      "pr_auc": 1.0,
+      "roc_auc": 1.0,
+      "legitimate_fpr": 0.0,
+      "verified_attack_recall": 0.8005540166204986
+    }
+  ]
+}

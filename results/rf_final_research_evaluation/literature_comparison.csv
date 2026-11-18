@@ -1,0 +1,7 @@
+work,year,method,data,reported_result,directly_comparable,source
+This work (Frozen RF),2026,"RF, Beacon W20",AWID3 train; D05-A-R2 cross-dataset,D05-A-R2 F1=0.8892,YES only to local baselines on matched W20,local experiment
+AWID3 dataset,2021,Public Wi-Fi attack corpus,"WPA2-Enterprise, 802.11w, Wi-Fi 5",dataset/provenance reference,NO,https://doi.org/10.1109/ACCESS.2021.3061609
+ETGuard,2019,"Beacon fingerprinting, client-server",12 deployment attack scenarios,1 FP scenario; 0 FN,"NO: different data, unit, and deployment",https://doi.org/10.1016/j.cose.2019.02.014
+Lu et al. / ET-spotter,2018,Statistical 802.11 data-frame forwarding,Authors' client-side experiment,96% accuracy,NO: data frames and protocol differ,https://doi.org/10.1587/transinf.2018EDP7030
+Seo et al.,2020,RF; clock skew/RSS/channel/duration,10 APs; 10-minute samples,99.51–100% accuracy; ~1% FP noted,NO: own data and 300–500 Beacon decision unit,https://doi.org/10.3745/JIPS.03.0137
+Wi-Fi Frame Classification,2020,Feature selection + J48,Authors' legitimate/rogue captures,91.2367% accuracy,NO: different capture and metric,https://doi.org/10.1109/TENSYMP50017.2020.9231042

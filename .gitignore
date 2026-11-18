@@ -1,0 +1,28 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+outputs/
+data/*.pcap
+data/*.pcapng
+Dataset/
+
+# Historical non-RF prototypes are retained only in the local research tree.
+src/evil_twin/calibration/
+src/evil_twin/detection/
+src/evil_twin/phase3/
+src/evil_twin/phase4/
+src/evil_twin/phase4_1/
+src/evil_twin/system/
+src/evil_twin/temporal/
+src/evil_twin/validation/
+
+# Local tables outside the final paper scope.
+results/external_real_capture_evaluation/
+results/ml_knn_lstm/external_predictions.csv
+results/clean_rebuild_v1/development/d01_reference_features.csv
+results/clean_rebuild_v1/development/d03_development_validation.csv

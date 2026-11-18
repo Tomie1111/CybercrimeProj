@@ -1,0 +1,41 @@
+{
+  "experiment_id": "clean_rebuild_v1",
+  "model": "random_forest",
+  "params": {
+    "n_estimators": 100,
+    "max_depth": 6,
+    "min_samples_leaf": 1
+  },
+  "threshold": 0.3,
+  "feature_selection": "PREDECLARED_ALL_ELIGIBLE_FEATURES_NO_D05_SELECTION",
+  "awid3_internal_test": {
+    "n": 158,
+    "decisions": 158,
+    "decision_coverage": 1.0,
+    "abstention_rate": 0.0,
+    "confusion_matrix": [
+      [
+        86,
+        0
+      ],
+      [
+        0,
+        72
+      ]
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "balanced_accuracy": 1.0,
+    "pr_auc": 1.0,
+    "roc_auc": 1.0,
+    "legitimate_fpr": 0.0,
+    "verified_attack_recall": 1.0
+  },
+  "d01_reference_windows": 1164,
+  "d02_calibration_windows": 584,
+  "d02_legitimate_fpr": 0.0,
+  "d03_validation_windows": 734,
+  "d03_legitimate_fpr": 0.0,
+  "d05_accessed": false
+}

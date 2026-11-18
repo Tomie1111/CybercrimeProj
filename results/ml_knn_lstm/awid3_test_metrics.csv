@@ -1,0 +1,3 @@
+model,split,scope,n,tn,fp,fn,tp,precision,recall,f1,balanced_accuracy,legitimate_fpr,pr_auc,roc_auc
+knn,AWID3_test,all_windows,158,86,0,0,72,1.0,1.0,1.0,1.0,0.0,1.0,1.0
+lstm,AWID3_test,causal_seq5,150,82,0,0,68,1.0,1.0,1.0,1.0,0.0,0.9999999999999998,1.0

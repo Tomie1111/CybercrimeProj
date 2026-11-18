@@ -1,0 +1,2 @@
+model,prediction_unit,window_size_beacons,model_artifact_bytes,latency_p50_ms_single_window,latency_p95_ms_single_window,latency_p99_ms_single_window,throughput_windows_per_second_single_window_calls,cpu_time_ms_per_window,python_incremental_peak_mib,isolated_process_peak_rss_mib,interpretation
+Frozen RF,W20,20,129244,15.98775,16.8811748,19.345885,62.803145822795074,10.550119226393628,4.205201148986816,425.671875,small model artifact; Python process RSS is not embedded-class lightweight

@@ -1,0 +1,11 @@
+model,scenario,evaluation_role,n,tn,fp,fn,tp,precision,recall,f1,balanced_accuracy,false_positive_rate,comparison_status,configuration
+Frozen RF,AWID3 temporal test,same-capture temporal test,158,86,0,0,72,1.0,1.0,1.0,1.0,0.0,SAME_W20_AS_KNN; LSTM_USES_SEQ5,
+KNN,AWID3 temporal test,all_windows,158,86,0,0,72,1.0,1.0,1.0,1.0,0.0,SAME_W20,
+LSTM,AWID3 temporal test,causal_seq5,150,82,0,0,68,1.0,1.0,1.0,1.0,0.0,CAUSAL_SEQ5_DIFFERENT_SUPPORT,
+Frozen RF,D05-A-R2,previously-inspected cross-dataset test,850,489,0,72,289,1.0,0.8005540166204986,0.8892307692307693,0.9002770083102494,0.0,SAME_W20_AS_KNN,
+KNN,D05-A-R2,knn frozen external,850,489,0,355,6,1.0,0.01662049861495845,0.0326975476839237,0.5083102493074793,0.0,SAME_W20,
+LSTM,D05-A-R2,lstm frozen external,842,485,0,357,0,0.0,0.0,0.0,0.5,0.0,CAUSAL_SEQ5_DIFFERENT_SUPPORT,
+CART,AWID3 temporal test,internal temporal test,158,86,0,72,0,0.0,0.0,0.0,0.5,0.0,SAME_W20_FEATURE_SCHEMA; VALIDATION_SELECTED_NO_D05_TUNING,"{""max_depth"": 3, ""min_samples_leaf"": 5, ""threshold"": 0.3}"
+CART,D05-A-R2,cross-dataset,850,0,489,361,0,0.0,0.0,0.0,0.0,1.0,SAME_W20_FEATURE_SCHEMA; VALIDATION_SELECTED_NO_D05_TUNING,"{""max_depth"": 3, ""min_samples_leaf"": 5, ""threshold"": 0.3}"
+Logistic Regression,AWID3 temporal test,internal temporal test,158,86,0,0,72,1.0,1.0,1.0,1.0,0.0,SAME_W20_FEATURE_SCHEMA; VALIDATION_SELECTED_NO_D05_TUNING,"{""C"": 0.1, ""threshold"": 0.3}"
+Logistic Regression,D05-A-R2,cross-dataset,850,489,0,361,0,0.0,0.0,0.0,0.5,0.0,SAME_W20_FEATURE_SCHEMA; VALIDATION_SELECTED_NO_D05_TUNING,"{""C"": 0.1, ""threshold"": 0.3}"

@@ -1,0 +1,44 @@
+{
+  "seed": 20261116,
+  "dataset": "AWID3/7. Evil_Twin.pcap only",
+  "window": "W20 non-overlapping",
+  "split_method": "global chronological 60/20/20 with boundary-crossing windows dropped",
+  "memberships": {
+    "train": {
+      "windows": 303,
+      "normal": 263,
+      "evil_twin": 40,
+      "time_min": 1608065662.005638,
+      "time_max": 1608066202.481681
+    },
+    "validation": {
+      "windows": 156,
+      "normal": 86,
+      "evil_twin": 70,
+      "time_min": 1608066203.712379,
+      "time_max": 1608066383.528038
+    },
+    "test": {
+      "windows": 158,
+      "normal": 86,
+      "evil_twin": 72,
+      "time_min": 1608066384.667147,
+      "time_max": 1608066564.266814
+    }
+  },
+  "frame_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "time_boundaries": {
+    "train_end": 1608066203.3623435,
+    "validation_end": 1608066383.8145788,
+    "dropped_boundary_windows": 4
+  },
+  "device_held_out_status": "DEVICE_HELD_OUT_NOT_FEASIBLE",
+  "test_status": "WITHIN_SESSION_TEMPORAL_TEST_NOT_INDEPENDENT_DEVICE_OR_SESSION",
+  "rogue_ap_used_for_training": false,
+  "selection_objective": "balanced_accuracy",
+  "threshold": 0.3
+}

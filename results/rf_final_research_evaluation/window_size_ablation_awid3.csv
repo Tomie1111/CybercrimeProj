@@ -1,0 +1,4 @@
+window_size,train_windows,validation_windows,stride,latency_proxy_beacons,n,decisions,decision_coverage,abstention_rate,confusion_matrix,precision,recall,f1,balanced_accuracy,pr_auc,roc_auc,legitimate_fpr,verified_attack_recall,feature_count
+10,608,314,10,10,314,314,1.0,0.0,"[[173, 0], [0, 141]]",1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,82
+20,303,156,20,20,156,156,1.0,0.0,"[[86, 0], [0, 70]]",1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,82
+50,119,61,50,50,61,61,1.0,0.0,"[[34, 0], [0, 27]]",1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,82

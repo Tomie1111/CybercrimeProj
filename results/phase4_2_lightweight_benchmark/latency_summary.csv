@@ -1,0 +1,9 @@
+method,method_name,unit,input_units_per_repetition,warmup_repetitions,measured_repetitions,latency_p50_us,latency_p95_us,latency_p99_us,wall_seconds_total,cpu_seconds_total,cpu_time_us_per_unit,throughput_units_per_second,timer_overhead_ns_median,measurement_scope
+R1,R1-only,Beacon,17602,1,5,0.75,1.0,1.25,0.120690917,0.120668,1.371071469151233,729218.0902064072,42.0,detection_only_pre_extracted_input
+R1,R1-only,W20,879,1,5,3.083,4.25,7.086460000000017,0.068739167,0.068724,15.636860068259386,63937.34739322634,42.0,detection_only_pre_extracted_input
+STATIC,Static Structural/Security Fingerprinting,W20,879,1,5,28.541,34.375,40.58646000000002,0.184240583,0.184186,41.90807736063709,23854.679183250304,42.0,detection_only_pre_extracted_input
+TIMESHIELD,Time-Shield v2,Beacon,17602,1,5,7.875,18.625,24.042,0.921969042,0.915263,10.399534143847289,95458.7366719847,42.0,detection_only_pre_extracted_input
+TIMESHIELD,Time-Shield v2,W20,879,1,5,3.375,4.666,11.382500000000052,0.109633625,0.083445,18.986348122866893,40088.06604725512,42.0,detection_only_pre_extracted_input
+RF,Frozen Random Forest,W20,879,1,5,15987.75,16881.1748,19345.885,69.980570916,46.367774,10550.119226393628,62.803145822795074,42.0,detection_only_pre_extracted_input
+FULL,Phase 4.1 Evidence-Gated Full Multi-Factor,Beacon,17602,1,5,8.541,19.042,23.625,0.962857541,0.960012,10.907987728667196,91405.00671427987,42.0,detection_only_pre_extracted_input
+FULL,Phase 4.1 Evidence-Gated Full Multi-Factor,W20,879,1,5,38.75,45.887600000000006,53.75498000000003,0.230217375,0.230163,52.36928327645052,19090.652910102897,42.0,detection_only_pre_extracted_input

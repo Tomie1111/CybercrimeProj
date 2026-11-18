@@ -1,0 +1,89 @@
+schema_version: 1
+experiment_id: clean_rebuild_v1
+status: DEVELOPMENT_NOT_FROZEN
+purpose: Clean rebuild with a one-way firewall between development data and D05 evaluation
+seed: 20261116
+
+dataset_roles:
+  AWID3_EVIL_TWIN:
+    files: ["7. Evil_Twin.pcap"]
+    role: SUPERVISED_MODEL_DEVELOPMENT
+    allowed_stages:
+      - training
+      - hyperparameter_selection
+      - feature_selection
+      - threshold_selection
+      - internal_temporal_test
+    note: Use the official AWID3 Evil Twin filter and temporal splits only.
+  D01:
+    files:
+      - D01_deco_enrollment_ch6.pcap
+      - D01_R2_deco_enrollment_pilot_ch6.pcap
+      - D01_R4_deco_enrollment_pilot_ch6.pcap
+    role: LEGITIMATE_ENROLLMENT_AND_REFERENCE
+    allowed_stages: [identity_enrollment, feature_extraction_development]
+    label: legitimate
+    evaluation_bssid: "ba:a7:b9:ae:39:1c"
+  D02:
+    files: [D02_deco_calibration_ch6.pcap]
+    role: LEGITIMATE_ONLY_CALIBRATION
+    allowed_stages: [calibration, threshold_selection]
+    label: legitimate
+    evaluation_bssid: "ba:a7:b9:ae:39:1c"
+  D03:
+    files: [D03_deco_legitimate_monitoring_ch6.pcap]
+    role: DEVELOPMENT_VALIDATION
+    allowed_stages: [feature_selection, development_validation]
+    label: legitimate
+    evaluation_bssid: "ba:a7:b9:ae:39:1c"
+  D05:
+    files:
+      - D05A_same_ssid_different_bssid_ch6.pcap
+      - D05A_R2_wpa2_matched_ch6.pcap
+    role: PREVIOUSLY_INSPECTED_EXTERNAL_TEST
+    allowed_stages: [post_freeze_evaluation]
+    prohibited_stages:
+      - training
+      - calibration
+      - feature_selection
+      - hyperparameter_selection
+      - threshold_selection
+      - model_selection
+    disclosure: Results are external test results, but D05 is previously inspected and is not a pristine independent test.
+    ground_truth:
+      legitimate_bssid: "ba:a7:b9:ae:39:1c"
+      evil_twin_bssid: "28:28:5d:a6:1c:28"
+      unlisted_bssid_policy: exclude_before_prediction_and_metrics
+
+excluded_from_clean_rebuild:
+  AWID3_ROGUE_AP:
+    files: ["4. Rogue_AP.pcap"]
+    reason: Rogue AP is not the target Evil Twin class and is not used as a supervised shortcut.
+  D00:
+    files: [D00_deco_pilot_ch6.pcap]
+    reason: Historical pilot only.
+  D04:
+    files: [D04_zyxel_benign_control_ch6.pcap]
+    reason: Preserved as historical evidence but excluded from clean_rebuild_v1 development and evaluation.
+
+freeze_policy:
+  freeze_before_dataset: D05
+  clean_model_path: models/clean_rebuild_v1/selected_model.joblib
+  clean_metadata_path: models/clean_rebuild_v1/selected_model.metadata.json
+  lock_path: experiments/clean_rebuild_v1/freeze_manifest.json
+  required_hash_inputs:
+    - experiments/clean_rebuild_v1/protocol.yaml
+    - configs/features.yaml
+    - configs/training.yaml
+    - models/clean_rebuild_v1/selected_model.joblib
+    - models/clean_rebuild_v1/selected_model.metadata.json
+    - scripts/run_clean_rebuild_v1.py
+    - src/evil_twin/data/real_capture_scope.py
+    - src/evil_twin/features/windows.py
+  evaluation_requirements:
+    - verify_all_hashes
+    - no_refit
+    - no_recalibration
+    - no_threshold_change
+    - write_results_to_new_directory
+    - disclose_previously_inspected_test
